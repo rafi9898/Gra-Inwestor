@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafał Podraza">
+    <meta name="description" content="Invest your money and become a millionaire.Grow your business and be the best.">
+    <meta name="keywords" content="Game, become a millionaire, win, free, invest">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Investor - Interactive Game</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section id="home">
+        <div class="container">
+            <form action="#">
+                <input type="text" class="nick-name" placeholder="Your Name..."> <br />
+
+                <div class="btn-box">
+                    <button type="reset" class="resetBtn">RESET</button>
+                    <button class="startBtn">START GAME</button>
+                </div>
+
+                <span class="info"></span>
+            </form>
+           
+        </div>
+    </section>
+
+    <section id="game-area">
+        <div class="container">
+            <span class="nick-area"></span>
+            <span class="money-area"></span>
+
+            <div class="investor-box">
+                <div class="area">
+                <div class="investor-name">
+                    <h2></h2>
+                </div>
+
+                <div class="investor-image">
+                    <img src="" alt="Bill Gates">
+                    <p></p>
+                </div>
+
+                <div class="investor-button">
+                    <input type="number" placeholder="Amount of money..." id="amount-money">
+                    <div class="extraBtn">
+                        <button id="all">ALL FUNDS</button>
+                        <button id="half">HALF FUNDS</button>
+                    </div>
+                    <button id="send-money">SEND MONEY</button>
+                </div>
+
+                <p class="info-win"></p>
+            </div>
+                <div class="mywin">
+                    <div class="img-growth">
+                        <img src="img/growth.png" alt="image growth">
+                    </div>
+                    <p id="amountwin"></p>
+                    <button id="receive">RECEIVE FUNDS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="endgame">
+        <div class="container">
+            <h1 id="totalearnings"></h1> <br />
+        </div>
+        
+        <div class="newgame-button">
+            <button id="resetGame">NEW GAME</button>
+        </div>
+    </section>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
