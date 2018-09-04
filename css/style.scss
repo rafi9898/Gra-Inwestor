@@ -1,9 +1,25 @@
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
 @import "variables/variables";
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -13,24 +29,36 @@ body {
 #home {
     width: 100%;
     min-height: 100vh;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-primary-light,0.8)), to(rgba($color-primary-dark,0.8))), url(../img/home-background.png);
+    background-image: -webkit-linear-gradient(left top, rgba($color-primary-light,0.8), rgba($color-primary-dark,0.8)), url(../img/home-background.png);
+    background-image: -o-linear-gradient(left top, rgba($color-primary-light,0.8), rgba($color-primary-dark,0.8)), url(../img/home-background.png);
     background-image: linear-gradient(to right bottom, rgba($color-primary-light,0.8), rgba($color-primary-dark,0.8)), url(../img/home-background.png);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    animation: bgintro 3s;
+    -webkit-animation: bgintro 3s;
+            animation: bgintro 3s;
     opacity: 1;
 
     .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
 
-        form {
+        .form {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
 
             input {
                 text-align: center;
@@ -50,14 +78,24 @@ body {
                     margin-bottom: 40px;
 
                     &:hover {
-                        transform: translateY(-2px);
-                        box-shadow: 3px 5px 11px $color-black;
+                        -webkit-transform: translateY(-2px);
+                            -ms-transform: translateY(-2px);
+                                transform: translateY(-2px);
+                        -webkit-box-shadow: 3px 5px 11px $color-black;
+                                box-shadow: 3px 5px 11px $color-black;
+                        -webkit-transition: all 0.2s;
+                        -o-transition: all 0.2s;
                         transition: all 0.2s;
                     }
 
                     &:focus {
-                        transform: translateY(-1px);
-                        box-shadow: 2px 3px 9px $color-black;
+                        -webkit-transform: translateY(-1px);
+                            -ms-transform: translateY(-1px);
+                                transform: translateY(-1px);
+                        -webkit-box-shadow: 2px 3px 9px $color-black;
+                                box-shadow: 2px 3px 9px $color-black;
+                        -webkit-transition: all 0.2s;
+                        -o-transition: all 0.2s;
                         transition: all 0.2s;
                     }
                 }
@@ -66,7 +104,8 @@ body {
                     background-color: #bf0b32;
                     color: $color-white;
                     border: none;
-                    box-shadow: 1px 2px 8px $color-black;
+                    -webkit-box-shadow: 1px 2px 8px $color-black;
+                            box-shadow: 1px 2px 8px $color-black;
                     cursor: pointer;
                     font-weight: bolder;
                     font-size: 16px;
@@ -77,7 +116,8 @@ body {
                     background-color: #2ebe41;
                     color: $color-white;
                     border: none;
-                    box-shadow: 1px 2px 8px $color-black;
+                    -webkit-box-shadow: 1px 2px 8px $color-black;
+                            box-shadow: 1px 2px 8px $color-black;
                     cursor: pointer;
                     font-weight: bolder;
                     font-size: 16px;
@@ -92,7 +132,8 @@ body {
                 color: $color-white;
                 text-transform: uppercase;
                 border-radius: 15px;
-                box-shadow: 2px 4px 10px $color-black;
+                -webkit-box-shadow: 2px 4px 10px $color-black;
+                        box-shadow: 2px 4px 10px $color-black;
                 opacity: 0;
             }
         }
@@ -106,12 +147,20 @@ body {
     display: none;
 
     .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
 
         span {
-            flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
             text-align: center;
             padding: 40px;
             text-transform: uppercase;
@@ -141,13 +190,18 @@ body {
             }
 
             .investor-image {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
 
                 img {
                     width: 40%;
                     border: 1px solid $color-black;
-                    box-shadow: 1px 2px 8px $color-black;
+                    -webkit-box-shadow: 1px 2px 8px $color-black;
+                            box-shadow: 1px 2px 8px $color-black;
                 }
 
                 p {
@@ -162,13 +216,21 @@ body {
                     width: 30%;
                     height: 40px;
                     text-align: center;
-                    box-shadow: 1px 1px 3px $color-black;
+                    -webkit-box-shadow: 1px 1px 3px $color-black;
+                            box-shadow: 1px 1px 3px $color-black;
                 }
 
                 .extraBtn {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    justify-content: center;
-                    flex-flow: row wrap;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: row wrap;
+                            flex-flow: row wrap;
                     display: none;
 
                     button {
@@ -179,7 +241,8 @@ body {
                         color: #FFF;
                         font-weight: bolder;
                         letter-spacing: 0.7px;
-                        flex-basis: 50%;
+                        -ms-flex-preferred-size: 50%;
+                            flex-basis: 50%;
                         outline: none;
                         border: 1px solid $color-black;
                         cursor: pointer;
@@ -221,14 +284,18 @@ body {
                 font-weight: bolder;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
-                animation: color 3s;
-                transform: scale(1.2);
+                -webkit-animation: color 3s;
+                        animation: color 3s;
+                -webkit-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                        transform: scale(1.2);
             }
             
             .img-growth img {
                 width: 40%;
                 margin-bottom: 12px;
-                animation: growth 2s;
+                -webkit-animation: growth 2s;
+                        animation: growth 2s;
             }
 
             button {
@@ -252,8 +319,12 @@ body {
 
     .container {
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         h1 {
             margin-top: 25vh;
@@ -280,6 +351,17 @@ body {
 }
 
 
+@-webkit-keyframes bgintro {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 @keyframes bgintro {
     0% {
         opacity: 0;
@@ -291,32 +373,63 @@ body {
 }
 
 
-@keyframes growth {
+@-webkit-keyframes growth {
     0% {
-        transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+                transform: scale(1.3);
     }
 
     100% {
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+
+@keyframes growth {
+    0% {
+        -webkit-transform: scale(1.3);
+                transform: scale(1.3);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@-webkit-keyframes color {
+    0% {
+        color: crimson;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+    100% {
+        color: #2ebe41;
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
     }
 }
 
 @keyframes color {
     0% {
         color: crimson;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 
     100% {
         color: #2ebe41;
-        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
     }
 }
 
 @media(max-width: 1000px) {
     #home {
         .container {
-            form {
+            .form {
                 input {
                     height: 40px;
                     width: 80vw;
@@ -351,12 +464,20 @@ body {
         overflow-y: hidden;
     
         .container {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            flex-flow: row wrap;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
     
             span {
-                flex-basis: 50%;
+                -ms-flex-preferred-size: 50%;
+                    flex-basis: 50%;
                 text-align: center;
                 padding: 20px;
                 text-transform: uppercase;
@@ -380,6 +501,8 @@ body {
                 background-color: $color-white;
                 text-align: center;
                 padding: 50px;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
     
                 .investor-name h2 {
@@ -388,14 +511,22 @@ body {
                 
     
                 .investor-image {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    justify-content: center;
-                    flex-flow: column wrap; 
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: column wrap;
+                            flex-flow: column wrap; 
 
                     img {
                         width: 25%;
                         border: 1px solid $color-black;
-                        box-shadow: 1px 2px 8px $color-black;
+                        -webkit-box-shadow: 1px 2px 8px $color-black;
+                                box-shadow: 1px 2px 8px $color-black;
                         margin: 0 auto;
                         margin-bottom: 40px;
                     }
@@ -407,15 +538,23 @@ body {
     
                 .investor-button {
                     margin-top: 25px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    justify-content: center;
-                    flex-flow: column wrap;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: column wrap;
+                            flex-flow: column wrap;
     
                     input {
                         width: 100%;
                         height: 40px;
                         text-align: center;
-                        box-shadow: 1px 1px 3px $color-black;
+                        -webkit-box-shadow: 1px 1px 3px $color-black;
+                                box-shadow: 1px 1px 3px $color-black;
                         margin: 0 auto;
                     }
     
@@ -452,14 +591,18 @@ body {
                     font-weight: bolder;
                     text-transform: uppercase;
                     letter-spacing: 0.5px;
-                    animation: color 3s;
-                    transform: scale(1.2);
+                    -webkit-animation: color 3s;
+                            animation: color 3s;
+                    -webkit-transform: scale(1.2);
+                        -ms-transform: scale(1.2);
+                            transform: scale(1.2);
                 }
                 
                 .img-growth img {
                     width: 40%;
                     margin-bottom: 12px;
-                    animation: growth 2s;
+                    -webkit-animation: growth 2s;
+                            animation: growth 2s;
                 }
     
                 button {
@@ -483,8 +626,12 @@ body {
     
         .container {
             position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
     
             h1 {
                 margin-top: 25vh;
@@ -508,9 +655,16 @@ body {
     }
 
     .extraBtn {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
-        justify-content: center;
-        flex-flow: row wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
 
         button {
             height: 40px;
@@ -520,7 +674,8 @@ body {
             color: #FFF;
             font-weight: bolder;
             letter-spacing: 0.7px;
-            flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
             outline: none;
             border: 1px solid $color-black;
             cursor: pointer;

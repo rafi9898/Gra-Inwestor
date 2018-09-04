@@ -26,6 +26,7 @@ let payment = 0;
 const betAllFunds = document.getElementById("all");
 const betHalfFunds = document.getElementById("half");
 
+
 //Investors
 const InvestorNameArea = document.querySelector(".investor-name h2");
 const InvestorPhotoArea = document.querySelector(".investor-image img");
@@ -142,6 +143,7 @@ const newArea = () => {
     gameArea.style = "display: inline-block";
     area.style = "display: inline-block";
 }
+
 
     amountMoney.addEventListener("keypress", function(e) {
         if(e.keyCode == 13) {
